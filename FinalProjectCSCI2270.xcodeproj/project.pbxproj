@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90327CB71AE5B1B3007C3A78 /* RoadTrip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90327CB51AE5B1B3007C3A78 /* RoadTrip.cpp */; };
 		90C15EBC1AE427C400E34E7E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90C15EBB1AE427C400E34E7E /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90327CB51AE5B1B3007C3A78 /* RoadTrip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoadTrip.cpp; sourceTree = "<group>"; };
+		90327CB61AE5B1B3007C3A78 /* RoadTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadTrip.h; sourceTree = "<group>"; };
 		90C15EB81AE427C400E34E7E /* FinalProjectCSCI2270 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FinalProjectCSCI2270; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C15EBB1AE427C400E34E7E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				90C15EBB1AE427C400E34E7E /* main.cpp */,
+				90327CB51AE5B1B3007C3A78 /* RoadTrip.cpp */,
+				90327CB61AE5B1B3007C3A78 /* RoadTrip.h */,
 			);
 			path = FinalProjectCSCI2270;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90327CB71AE5B1B3007C3A78 /* RoadTrip.cpp in Sources */,
 				90C15EBC1AE427C400E34E7E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +241,7 @@
 				90C15EC11AE427C400E34E7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
