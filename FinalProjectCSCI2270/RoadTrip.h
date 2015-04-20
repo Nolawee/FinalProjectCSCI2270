@@ -26,11 +26,24 @@ struct city{
 class RoadTrip
 {
 public:
+    RoadTrip(std::string startingCity);
+    virtual ~RoadTrip();
+    void setThingsToDo();
+    void addCity();
+    void removeCity();
+    void insertCity(stringPrevCity);
+    void getCurrent();
+    void findCity(std::string cityName);
+    void printPath();
+    void printActivities();
     
     
 protected:
     
 private:
+    city head;
+    city current;
+
 };
 
 #endif /* defined(__FinalProjectCSCI2270__RoadTrip__) */
