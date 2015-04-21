@@ -29,9 +29,9 @@ public:
     RoadTrip(std::string startingCity);
     virtual ~RoadTrip();
     void setThingsToDo();
-    void addCity();
-    void removeCity();
-    void insertCity(stringPrevCity);
+    city* addCity(city* previous, string cityName);
+    void removeCity(city* head, string deletedCity);
+    void insertCity(city *head, string newCity, string PrevCity);
     void getCurrent();
     void findCity(std::string cityName);
     void printPath();
@@ -41,8 +41,8 @@ public:
 protected:
     
 private:
-    city head;
-    city current;
+    city *head;
+    city *current;
 
 };
 
