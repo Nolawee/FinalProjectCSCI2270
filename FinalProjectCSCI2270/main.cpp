@@ -27,11 +27,44 @@ int main() {
             x.addCity();
         }
         else if(command == '2'){
-            
+            x.printPath();
         }
-        else if(command == '2'){
-            
+        else if(command == '3'){
+            string newCity;
+            string prev;
+            cout << "What city would you like to add?" << endl;
+            cin >> newCity;
+            cout << "What city would you like to add it after?" << endl;
+            cin >> prev;
+            x.insertCity(x->head, newCity, prev);
         }
+        else if(command == '4'){
+            string removedCity;
+            cout << "What city would you like to remove?" << endl;
+            cin >> removedCity;
+            x.removeCity(x->head, removedCity);
+        }
+        else if(command == '5'){
+            x.setThingToDo();
+        }
+        else if(command == '6'){
+            x.printActivities();
+        }
+        else if(command == '7'){
+            x.getCurrent();
+        }
+        else if(command == '8'){
+            string city2Find;
+            cout << "What city are you looking for?" << endl;
+            cin >> city2Find;
+            x.findCity(city2Find);
+        }
+        else {
+            cout << "Invalid Selection Moron." << endl;
+        }
+        
+        displayMenu();
+        getline(cin, command);
     }
      */
     cout<<"Hello World"<<endl;
