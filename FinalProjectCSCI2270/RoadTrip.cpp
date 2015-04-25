@@ -6,12 +6,14 @@
 //  Copyright (c) 2015 nope. All rights reserved.
 //
 
-#include "RoadTrip.h"
+
 #include <string>
 #include <iostream>
+#include <stdio.h>
 #include <fstream>
+#include "RoadTrip.h"
 
-city* addCity(city* previous, string cityName)
+city* RoadTrip::addCity(city* previous, string cityName)
 {
 	city* n = new city;
 	n->name = cityName;
@@ -19,7 +21,7 @@ city* addCity(city* previous, string cityName)
 	return n;
 }
 
-void insertCity(city *head, string newCity, string previousCity)
+void RoadTrip::insertCity(city *head, string newCity, string previousCity)
 {
 	city *n = new city;
 	n = head;
@@ -41,7 +43,7 @@ void insertCity(city *head, string newCity, string previousCity)
 	}
 }
 
-void removeCity(city* head, string deletedCity)
+void RoadTrip::removeCity(city* head, string deletedCity)
 {
 	city *n = new city;
 	city *p = new city;
@@ -63,29 +65,29 @@ void removeCity(city* head, string deletedCity)
 	}
 }
 
-void setThingsToDo(){
+void RoadTrip::setThingsToDo(){
 	cout << "What would you like to do in " << current->name << "?" << endl;
 	cout << "You may add up to 5 activities." << endl;
 	int i = 0;
 	string command;
-	while(i < 5 || command != nothing){
+	while(i < 5 || command != "nothing"){
 		getline(cin, command);
-		current->ThingsTodo[i];
+		current->ThingsTodo[i] = command;
 		cout << "Add another activity or type 'nothing' to finish adding." << endl;
 		i++;
 	}
 }
 
-void printActivities(){
+void RoadTrip::printActivities(){
 	string cityName;
 	cout << "Which city's activities would you like to print?" << endl;
-	getLine(cin, cityName);
+	getline(cin, cityName);
 	
 	city *n = new city;
 	n = head;
 	while(n != NULL){
 		if(n->name == cityName){
-			break
+			break;
 		}
 		n = n->next;
 	}
@@ -97,7 +99,7 @@ void printActivities(){
 	
 	else if (n->name == cityName){
 		for(int i = 0; i < 5; i++){
-			cout << i+1 << ". " << n->ThingsToDo[i] << endl;
+			cout << i+1 << ". " << n->ThingsTodo[i] << endl;
 		}
 	}
 }

@@ -14,11 +14,12 @@ using namespace std;
 void displayMenu();
 
 int main() {
+    /*
     string command;
     string startingCity;
     cout << "Where are you starting?" << endl;
     cin >> startingCity;
-    RoadTrip x
+    RoadTrip x;
     displayMenu();
     getline(cin, command);
     while(command != '9'){
@@ -32,6 +33,9 @@ int main() {
             
         }
     }
+     */
+    cout<<"Hello World"<<endl;
+    return 0;
 }
 
 void displayMenu(){

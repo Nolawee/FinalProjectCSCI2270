@@ -41,9 +41,10 @@ public:
 protected:
     
 private:
+    
     city *head;
     city *current;
-
+     
 };
 
 #endif /* defined(__FinalProjectCSCI2270__RoadTrip__) */

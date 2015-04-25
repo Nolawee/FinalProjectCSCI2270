@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BE6996E1-B1D0-4F92-A88A-26DFCE3AB771</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FinalProjectCSCI2270</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>816EB141A2F03133630077D113227B85867B2ED2</key>
+		<string>https://github.com/Nolawee/FinalProjectCSCI2270</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FinalProjectCSCI2270.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>816EB141A2F03133630077D113227B85867B2ED2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Nolawee/FinalProjectCSCI2270</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>816EB141A2F03133630077D113227B85867B2ED2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>816EB141A2F03133630077D113227B85867B2ED2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FinalProjectCSCI2270</string>
+		</dict>
+	</array>
+</dict>
+</plist>
