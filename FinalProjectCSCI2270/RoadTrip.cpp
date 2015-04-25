@@ -62,3 +62,42 @@ void removeCity(city* head, string deletedCity)
 		}
 	}
 }
+
+void setThingsToDo(){
+	cout << "What would you like to do in " << current->name << "?" << endl;
+	cout << "You may add up to 5 activities." << endl;
+	int i = 0;
+	string command;
+	while(i < 5 || command != nothing){
+		getline(cin, command);
+		current->ThingsTodo[i];
+		cout << "Add another activity or type 'nothing' to finish adding." << endl;
+		i++;
+	}
+}
+
+void printActivities(){
+	string cityName;
+	cout << "Which city's activities would you like to print?" << endl;
+	getLine(cin, cityName);
+	
+	city *n = new city;
+	n = head;
+	while(n != NULL){
+		if(n->name == cityName){
+			break
+		}
+		n = n->next;
+	}
+	
+	if(n->name != cityName){
+		cout << "City is not on path." << endl;
+		printActivities();
+	}
+	
+	else if (n->name == cityName){
+		for(int i = 0; i < 5; i++){
+			cout << i+1 << ". " << n->ThingsToDo[i] << endl;
+		}
+	}
+}
