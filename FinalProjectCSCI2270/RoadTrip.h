@@ -26,16 +26,18 @@ struct city{
 class RoadTrip
 {
 public:
-    RoadTrip(std::string startingCity);
-    virtual ~RoadTrip();
+    RoadTrip(string startingCity);
+    //virtual ~RoadTrip();
     void setThingsToDo();
     city* addCity(city* previous, string cityName);
-    void removeCity(city* head, string deletedCity);
+    city* removeCity(city* head, string deletedCity);
     void insertCity(city *head, string newCity, string PrevCity);
     void getCurrent();
     void findCity(std::string cityName);
-    void printPath();
+    void printPath(city* head);
     void printActivities();
+    void BuildNetworkWest();
+    void BuildNetworkEast();
     
     
 protected:
