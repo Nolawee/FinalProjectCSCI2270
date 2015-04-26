@@ -17,7 +17,7 @@ RoadTrip::RoadTrip(string startingCity)
 {
 
     //head->name = startingCity;
-    
+
 }
 
 
@@ -70,27 +70,38 @@ city* RoadTrip::removeCity(city *head, string deletedCity)
             temp2 = runner-> next;
             runner -> next = temp2 -> next;
             delete temp2;
-            
+
         }
         else
         {
             runner = runner -> next;
         }
-        
+
     }
     return head;
 }
 
 void RoadTrip::setThingsToDo(){
-	cout << "What would you like to do in " << current->name << "?" << endl;
-	cout << "You may add up to 5 activities." << endl;
-	int i = 0;
+	cout << "What city would you like to add things to?" << endl;
+    string cityName;
+    getline(cin, cityName);
+    city *n = new city;
+	n = head;
+	while(n->name != cityName){
+		/*if(n->name == cityName){
+			break;
+		}
+		cout << n->name << endl;*/
+		n = n->next;
+		//cout << n->name << endl;
+	}
+	cout << "What would you like to do in " << n->name << "?" << endl;
 	string command;
-	while(i < 5 || command != "nothing"){
+	cin >> command;
+	while(command != "nothing"){
 		getline(cin, command);
-		current->ThingsTodo[i] = command;
+		n->thingsToDo.push_back(command);
 		cout << "Add another activity or type 'nothing' to finish adding." << endl;
-		i++;
 	}
 }
 
@@ -98,7 +109,7 @@ void RoadTrip::printActivities(){
 	string cityName;
 	cout << "Which city's activities would you like to print?" << endl;
 	getline(cin, cityName);
-	
+
 	city *n = new city;
 	n = head;
 	while(n != NULL){
@@ -107,15 +118,15 @@ void RoadTrip::printActivities(){
 		}
 		n = n->next;
 	}
-	
+
 	if(n->name != cityName){
 		cout << "City is not on path." << endl;
 		printActivities();
 	}
-	
+
 	else if (n->name == cityName){
 		for(int i = 0; i < 5; i++){
-			cout << i+1 << ". " << n->ThingsTodo[i] << endl;
+			cout << i+1 << ". " << n->thingsToDo[i] << endl;
 		}
 	}
 }
@@ -135,29 +146,29 @@ void RoadTrip::printPath(city* head)
 /*
 void RoadTrip::BuildNetworkWest()
 {
- 
+
     city* n;
-    
+
     n = new city; //creates new node and sets n as the variable
     n->name = "Los Angeles";
     head = n;
     current = n;
-    
+
     n = new city;
     n->name = "San Fransico";
     current->next = n;
     current = n;
-    
+
     n = new city;
     n->name = "Seatlle";
     current->next = n;
     current = n;
-    
+
     n = new city;
     n->name = "Denver";
     current->next = n;
     current = n;
- 
+
     string citiesWest[4] = {"Los Angeles", "San Francisco", "Seattle", "Denver"};
     city *temp = new city;
     //city *z = new city;
@@ -170,40 +181,40 @@ void RoadTrip::BuildNetworkWest()
         //x = temp;
     }
 
-    
+
     return;
 
 }
 
 void RoadTrip::BuildNetworkEast()
 {
-    
+
     city* n;
-    
+
     n = new city; //creates new node and sets n as the variable
     n->name = "New York";
     head = n;
     current = n;
-    
+
     n = new city;
     n->name = "Washington D.C.";
     current->next = n;
     current = n;
-    
+
     n = new city;
     n->name = "Boston";
     current->next = n;
     current = n;
-    
+
     n = new city;
     n->name = "Philidelphia";
     current->next = n;
     current = n;
-    
-    
-    
+
+
+
     return head;
- 
+
     string citiesEast[4] = {"New York", "Washington D.C.","Boston", "Philidelphia"};
     city *temp = new city;
     city *z = new city;
